@@ -23,6 +23,9 @@ dependencies:
   dio: ^5.4.0
   flutter_screenutil: ^5.9.0
 
+  # Route
+  go_router: ^13.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
