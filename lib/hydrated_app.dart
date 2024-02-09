@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'routing/go_router_provider.dart';
+import 'utils/themes/theme_data.dart';
 
 class HydratedApp extends ConsumerWidget {
   const HydratedApp({super.key});
@@ -16,6 +17,7 @@ class HydratedApp extends ConsumerWidget {
       builder: (context, child) => MaterialApp.router(
         routerConfig: goRouter,
         debugShowCheckedModeBanner: false,
+        theme: themeData(context),
       ),
     );
   }
