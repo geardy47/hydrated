@@ -26,6 +26,9 @@ dependencies:
   # Route
   go_router: ^13.0.1
 
+  # Network
+  pocketbase: ^0.18.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

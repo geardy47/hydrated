@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../dashboard_controller.dart';
+import '../controller/dashboard_controller.dart';
 
 class BottomNavigationWidget extends ConsumerStatefulWidget {
   const BottomNavigationWidget({super.key});
@@ -16,10 +16,11 @@ class _BottomNavigationWidgetState
     extends ConsumerState<BottomNavigationWidget> {
   @override
   Widget build(BuildContext context) {
-    final index = ref.watch(dashboardControllerProvider);
+    final state = ref.watch(dashboardControllerProvider);
+    final controller = ref.read(dashboardControllerProvider.notifier);
 
     return BottomNavigationBar(
-      currentIndex: index,
+      currentIndex: state,
       items: [
         BottomNavigationBarItem(
           icon: Icon(
@@ -36,8 +37,7 @@ class _BottomNavigationWidgetState
           label: 'Profile',
         ),
       ],
-      onTap: (index) =>
-          ref.read(dashboardControllerProvider.notifier).setPageIndex(index),
+      onTap: (index) => controller.setPageIndex(index),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/bottom_navbar_widget.dart';
+import '../widgets/bottom_navbar_widget.dart';
 
 class DashboardScreen extends StatelessWidget {
   final Widget child;

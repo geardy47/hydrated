@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'routing/go_router_provider.dart';
-import 'utils/themes/theme_data.dart';
+import 'core/dependencies/go_router.dart';
+import 'core/themes/theme_data.dart';
 
 class HydratedApp extends ConsumerWidget {
   const HydratedApp({super.key});

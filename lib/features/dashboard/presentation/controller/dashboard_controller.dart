@@ -1,7 +1,7 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../routing/go_router_provider.dart';
-import '../data/dashboard_repository.dart';
+import '../../../../core/dependencies/go_router.dart';
+import '../../data/dashboard_repository.dart';
 
 part 'dashboard_controller.g.dart';
 
@@ -13,8 +13,8 @@ class DashboardController extends _$DashboardController {
   }
 
   void setPageIndex(int index) {
-    final dashboardRepository = ref.read(dashboardRepositoryProvider);
     final goRouter = ref.read(goRouterProvider);
+    final dashboardRepository = ref.read(dashboardRepositoryProvider);
 
     state = dashboardRepository.setPageIndex(index);
 
